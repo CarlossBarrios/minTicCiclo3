@@ -1,21 +1,23 @@
 // `   `
-
-const urlClientes = 'https://g51915f3bf5cc5a-barriosdb.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/client/client'
-const urlDoctores = 'https://g51915f3bf5cc5a-barriosdb.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/doctor/doctor'
-const urlMensajes = 'https://g51915f3bf5cc5a-barriosdb.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/message/message'
-
-
-
-document.querySelector('#clientes').addEventListener('click', traerDatosClientes);
-document.querySelector('#doctores').addEventListener('click', traerDatosDoctores);
-document.querySelector('#mensajes').addEventListener('click', traerDatosMensajes);
+//GET
+const urlClientesGET = 'https://g51915f3bf5cc5a-barriosdb.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/client/client'
+const urlDoctoresGET = 'https://g51915f3bf5cc5a-barriosdb.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/doctor/doctor'
+const urlMensajesGET = 'https://g51915f3bf5cc5a-barriosdb.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/message/message'
 
 
-function traerDatosMensajes() {
+
+
+
+document.querySelector('#verClientes').addEventListener('click', traerDatosClientes);
+document.querySelector('#verDoctores').addEventListener('click', traerDatosDoctores);
+document.querySelector('#verMensajes').addEventListener('click', traerDatosMensajes);
+
+
+function traerDatosClientes() {
 
     const xhr = new XMLHttpRequest();
 
-    xhr.open('GET', urlMensajes, true);
+    xhr.open('GET', urlClientesGET, true);
 
     xhr.send();
 
@@ -23,27 +25,29 @@ function traerDatosMensajes() {
 
         if (this.readyState == 4 && this.status == 200) {
 
-
             let datos = JSON.parse(this.responseText);
 
             let title = document.querySelector('#title');
 
             title.innerHTML = `
             
-            <h2>Mensajes</h2>
+            <h2>Clientes</h2>
 
             `
+
+
 
             let thead = document.querySelector('#thead');
 
             thead.innerHTML = `
             <tr>
             <th>id</th>
-            <th>Message Text</th>
+            <th>Name</th>
+            <th>email</th>
+            <th>age</th>
             </tr>
 
             `
-
 
             let res = document.querySelector('#res');
             res.innerHTML = '';
@@ -54,7 +58,11 @@ function traerDatosMensajes() {
 
                 <tr>
                     <td>${datos.items[i].id}</td>
-                    <td>${datos.items[i].messagetext} </td>
+                    <td>${datos.items[i].name} </td>
+                    <td>${datos.items[i].email}</td>
+                    <td>${datos.items[i].age}
+
+
                 </tr>
 
 
@@ -72,11 +80,18 @@ function traerDatosMensajes() {
 
 
 
+
+
+
+
+
+
+
 function traerDatosDoctores() {
 
     const xhr = new XMLHttpRequest();
 
-    xhr.open('GET', urlDoctores, true);
+    xhr.open('GET', urlDoctoresGET, true);
 
     xhr.send();
 
@@ -137,11 +152,11 @@ function traerDatosDoctores() {
 }
 
 
-function traerDatosClientes() {
+function traerDatosMensajes() {
 
     const xhr = new XMLHttpRequest();
 
-    xhr.open('GET', urlClientes, true);
+    xhr.open('GET', urlMensajesGET, true);
 
     xhr.send();
 
@@ -149,13 +164,14 @@ function traerDatosClientes() {
 
         if (this.readyState == 4 && this.status == 200) {
 
+
             let datos = JSON.parse(this.responseText);
 
             let title = document.querySelector('#title');
 
             title.innerHTML = `
             
-            <h2>Clientes</h2>
+            <h2>Mensajes</h2>
 
             `
 
@@ -164,12 +180,11 @@ function traerDatosClientes() {
             thead.innerHTML = `
             <tr>
             <th>id</th>
-            <th>Name</th>
-            <th>email</th>
-            <th>age</th>
+            <th>Message Text</th>
             </tr>
 
             `
+
 
             let res = document.querySelector('#res');
             res.innerHTML = '';
@@ -180,11 +195,7 @@ function traerDatosClientes() {
 
                 <tr>
                     <td>${datos.items[i].id}</td>
-                    <td>${datos.items[i].name} </td>
-                    <td>${datos.items[i].email}</td>
-                    <td>${datos.items[i].age}
-
-
+                    <td>${datos.items[i].messagetext} </td>
                 </tr>
 
 
@@ -197,3 +208,79 @@ function traerDatosClientes() {
     }
 
 }
+
+
+
+//POST
+const urlClientesPOST = 'https://g51915f3bf5cc5a-barriosdb.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/client/client'
+const urlDoctoresPOST = 'https://g51915f3bf5cc5a-barriosdb.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/doctor/doctor'
+const urlMensajesPOST = 'https://g51915f3bf5cc5a-barriosdb.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/message/message'
+
+
+
+document.querySelector('#registrarCliente').addEventListener('click', registroCliente);
+
+function registroCliente() {
+
+    let form = document.querySelector('#registerClient');
+
+    form.innerHTML = `
+            
+            <form>
+            <input id="inputClientName" placeholder="Type your name"><br>
+            <input id="inputClientEmail" placeholder="Type your email adress"><br>
+            <input id="inputClientAge" placeholder="Type your age"><br>
+
+        </form>
+
+        <a id="submitBtnPOSTclient" href="# ">Submit</a>
+
+            `
+
+
+
+}
+
+
+document.querySelector('#registrarDoctor').addEventListener('click', registroDoctor);
+
+function registroDoctor() {
+
+    let form = document.querySelector('#registerDoctor');
+
+    form.innerHTML = `
+            
+            <form>
+            <input id="inputDoctorName" placeholder="Type your name"><br>
+            <input id="inputDoctorSpecialty" placeholder="Type your Specialty"><br>
+            <input id="inputDoctorGradYear" placeholder="Type your Graduate Year"><br>
+            <input id="inputDoctorDeptID" placeholder="Type your Department id"><br>
+
+
+        </form>
+
+        <a id="submitBtnPOSTdoctor" href="# ">Submit</a>
+
+            `
+
+
+
+}
+
+
+
+
+
+
+
+
+//PUT
+
+
+
+
+//DELETE
+
+
+
+//GET BY ID

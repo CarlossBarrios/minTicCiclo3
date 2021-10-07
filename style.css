@@ -13,6 +13,7 @@ body {
 nav {
     background: #1b1b1b;
     height: 50px;
+    position: fixed;
 }
 
 nav:after {
@@ -22,15 +23,15 @@ nav:after {
 
 nav ul {
     list-style: none;
-    margin-right: 0px;
+    margin-right: 20px;
+    margin-left: 0px;
     margin-bottom: 0px;
     margin-top: 0px;
     position: relative;
 }
 
 nav ul li {
-    float: lwft;
-    display: inline-block;
+    float: right;
     background: #1b1b1b;
     height: 50px;
 }
@@ -144,7 +145,7 @@ h2 {
 
 #container {
     padding-left: 158px;
-    padding-top: 10px;
+    padding-top: 65px;
 }
 
 #messageTitle {
@@ -225,7 +226,7 @@ h2 {
     font-size: 15px;
 }
 
-#DoctorID {
+#inputClientMessageDoctorID {
     position: fixed;
     top: 490px;
     bottom: 0px;
@@ -238,9 +239,66 @@ h2 {
     font-size: 15px;
 }
 
-#submitBtn {
+#inputDoctorName {
+    position: fixed;
+    top: 120px;
+    bottom: 0px;
+    right: 0px;
+    left: 15px;
+    width: 328px;
+    height: 25px;
+    resize: none;
+}
+
+#inputDoctorSpecialty {
+    position: fixed;
+    top: 180px;
+    bottom: 0px;
+    right: 0px;
+    left: 15px;
+    width: 328px;
+    height: 25px;
+    resize: none;
+}
+
+#inputDoctorGradYear {
+    position: fixed;
+    top: 240px;
+    bottom: 0px;
+    right: 0px;
+    left: 15px;
+    width: 328px;
+    height: 25px;
+    resize: none;
+}
+
+#inputDoctorDeptID {
+    position: fixed;
+    top: 300px;
+    bottom: 0px;
+    right: 0px;
+    left: 15px;
+    width: 328px;
+    height: 25px;
+    resize: none;
+}
+
+#submitBtnPOSTclient {
     position: fixed;
     top: 270px;
+    bottom: 40px;
+    right: 0px;
+    left: 297px;
+    width: 55px;
+    height: 25px;
+    color: #89CFF0;
+    background-color: #262424;
+    border: none;
+}
+
+#submitBtnPOSTdoctor {
+    position: fixed;
+    top: 340px;
     bottom: 40px;
     right: 0px;
     left: 297px;
