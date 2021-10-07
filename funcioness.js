@@ -210,6 +210,8 @@ function traerDatosMensajes() {
 }
 
 
+//-------------------------------------------------------------------------------------------------------------------------------
+
 
 //POST
 const urlClientesPOST = 'https://g51915f3bf5cc5a-barriosdb.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/client/client'
@@ -220,9 +222,25 @@ const urlMensajesPOST = 'https://g51915f3bf5cc5a-barriosdb.adb.sa-santiago-1.ora
 
 document.querySelector('#registrarCliente').addEventListener('click', registroCliente);
 
+
+
+
 function registroCliente() {
 
+
     let form = document.querySelector('#registerClient');
+
+    let form2 = document.querySelector('#registerDoctor');
+
+
+
+
+
+    form2.innerHTML = `
+            
+    
+
+    `
 
     form.innerHTML = `
             
@@ -248,6 +266,17 @@ function registroDoctor() {
 
     let form = document.querySelector('#registerDoctor');
 
+
+    let form2 = document.querySelector('#registerClient');
+
+
+
+    form2.innerHTML = `
+            
+    
+
+    `
+
     form.innerHTML = `
             
             <form>
@@ -268,19 +297,11 @@ function registroDoctor() {
 }
 
 
-
-
-
-
-
-
-//PUT
-
-
-
-
-//DELETE
-
+//-------------------------------------------------------------------------------------------------------------------------------
 
 
 //GET BY ID
+
+//PUT
+
+//DELETE
