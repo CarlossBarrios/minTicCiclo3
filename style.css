@@ -3,7 +3,7 @@
     padding: 0;
     color: white;
     box-sizing: border-box;
-    font-family: 'Popins', sans-serif;
+    font-family: 'San Francisco', Helvetica, Arial, san-serif;
 }
 
 body {
@@ -29,7 +29,7 @@ nav ul {
 }
 
 nav ul li {
-    float: left;
+    float: lwft;
     display: inline-block;
     background: #1b1b1b;
     height: 50px;
@@ -45,7 +45,7 @@ nav ul li a {
 
 nav ul li a:hover {
     border-radius: 5px;
-    color: #f5745e;
+    color: #26A69A;
     box-shadow: none;
 }
 
@@ -92,41 +92,174 @@ nav ul ul ul li {
     left: 150px;
 }
 
+h2 {
+    font-size: 35px;
+}
+
 #title {
     position: fixed;
-    top: 50px;
+    top: 35px;
     bottom: 0px;
     right: 0px;
-    left: 400px;
+    left: 380px;
     width: 235px;
     height: 120px;
 }
 
 #line1 {
     position: fixed;
-    top: 145px;
+    top: 120px;
     bottom: 0px;
     right: 0px;
-    left: 400px;
+    left: 371px;
     width: 957px;
     height: 1px;
     border: none;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff5d;
 }
 
 #line2 {
     position: fixed;
-    top: 51px;
+    top: 68px;
     bottom: 0px;
     right: 0px;
-    left: 355px;
+    left: 370px;
     width: 1px;
-    height: 810px;
+    height: 677px;
     border: none;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff5d;
+}
+
+#line3 {
+    position: fixed;
+    top: 395px;
+    bottom: 0px;
+    right: 0px;
+    left: 10px;
+    width: 360px;
+    height: 1px;
+    border: none;
+    background-color: #ffffff5d;
 }
 
 #container {
     padding-left: 158px;
-    padding-top: 80px;
+    padding-top: 10px;
+}
+
+#messageTitle {
+    position: fixed;
+    top: 396px;
+    bottom: 0px;
+    right: 0px;
+    left: 11px;
+    width: 358px;
+    height: 55px;
+    border: none;
+    color: #ffffff;
+    font-family: 'San Francisco', Helvetica, Arial, san-serif;
+    font-size: 23px;
+}
+
+#textareaMessage {
+    position: fixed;
+    top: 540px;
+    bottom: 0px;
+    right: 0px;
+    left: 15px;
+    width: 335px;
+    height: 205px;
+    resize: none;
+    background: #1b1b1b;
+}
+
+#inputClientName {
+    position: fixed;
+    top: 120px;
+    bottom: 0px;
+    right: 0px;
+    left: 15px;
+    width: 328px;
+    height: 25px;
+    resize: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+#inputClientEmail {
+    position: fixed;
+    top: 170px;
+    bottom: 0px;
+    right: 0px;
+    left: 15px;
+    width: 328px;
+    height: 25px;
+    resize: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+#inputClientAge {
+    position: fixed;
+    top: 220px;
+    bottom: 0px;
+    right: 0px;
+    left: 15px;
+    width: 328px;
+    height: 25px;
+    resize: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+#inputClientEmail2 {
+    position: fixed;
+    top: 455px;
+    bottom: 0px;
+    right: 0px;
+    left: 15px;
+    width: 328px;
+    height: 25px;
+    resize: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+#DoctorID {
+    position: fixed;
+    top: 490px;
+    bottom: 0px;
+    right: 0px;
+    left: 15px;
+    width: 328px;
+    height: 25px;
+    resize: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+#submitBtn {
+    position: fixed;
+    top: 270px;
+    bottom: 40px;
+    right: 0px;
+    left: 297px;
+    width: 55px;
+    height: 25px;
+    color: #89CFF0;
+    background-color: #262424;
+    border: none;
+}
+
+#submitBtnMessage {
+    position: fixed;
+    top: 723px;
+    bottom: 40px;
+    right: 0px;
+    left: 297px;
+    width: 55px;
+    height: 25px;
+    color: #89CFF0;
+    background-color: #262424;
+    border: none;
 }

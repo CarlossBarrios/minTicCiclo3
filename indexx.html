@@ -38,8 +38,9 @@
 
                 <ul>
                     <li><a id="clientes" href="# ">Ver</a></li>
-                    <li><a href="# ">Elements</a></li>
-                    <li><a href="# ">Icons</a></li>
+                    <li><a href="# ">Buscar</a></li>
+                    <li><a href="# ">Modificar</a></li>
+                    <li><a href="# ">Registrarse</a></li>
 
                 </ul>
             </li>
@@ -50,8 +51,10 @@
 
                 <ul>
                     <li><a id="doctores" href="# ">Ver</a></li>
-                    <li><a href="# ">Elements</a></li>
-                    <li><a href="# ">Icons</a></li>
+                    <li><a href="# ">Buscar</a></li>
+                    <li><a href="# ">Modificar</a></li>
+                    <li><a href="# ">Registrarse</a></li>
+
 
                 </ul>
             </li>
@@ -61,8 +64,8 @@
 
                 <ul>
                     <li><a id="mensajes" href="# ">Ver</a></li>
-                    <li><a href="# ">Elements</a></li>
-                    <li><a href="# ">Icons</a></li>
+                    <li><a href="# ">Buscar</a></li>
+                    <li><a href="# ">Modificar</a></li>
 
                 </ul>
             </li>
@@ -76,11 +79,48 @@
 
     <div id="title">
 
+        <h2> </h2>
+
     </div>
 
     <hr id="line1" />
     <hr id="line2">
+    <hr id="line3">
 
+
+    <!----------------------------------------------------------------------------------------->
+
+    <div id="registerClient">
+
+        <form>
+            <input id="inputClientName" placeholder="Type your name"><br>
+            <input id="inputClientEmail" placeholder="Type your email adress"><br>
+            <input id="inputClientAge" placeholder="Type your age"><br>
+
+        </form>
+
+    </div>
+    <!--
+    <div id="redisterDoctor"></div>
+
+
+
+    <div id="searchClient"></div>
+    <div id="searchDoctor"></div>
+    <div id="searchMessage"></div>
+
+
+
+    <div id="updateClient"></div>
+    <div id="updateDoctor"></div>
+    <div id="updateMessage"></div>
+
+-->
+
+
+
+
+    <!----------------------------------------------------------------------------------------->
 
 
     <div id="container" class="container">
@@ -102,8 +142,31 @@
     </div>
 
 
+    <div id="messageSection">
 
-    <script src="funcioness.js "></script>
+        <label id="messageTitle">Write a message to your doctor:</label>
+
+        <form>
+
+            <input id="inputClientEmail2" placeholder="Type your email adress"><br>
+            <input id="DoctorID" placeholder="Type the target doctor's id">
+        </form>
+
+
+
+        <textarea id="textareaMessage">
+
+    </textarea>
+
+        <a id="submitBtn" href="# ">Submit</a>
+
+
+        <a id="submitBtnMessage" href="# ">Submit</a>
+
+    </div>
+
+    <script src="funcioness.js ">
+    </script>
 </body>
 
 </html>
