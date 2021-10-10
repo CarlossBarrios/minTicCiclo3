@@ -251,7 +251,6 @@ function registroCliente() {
 
         </form>
 
-        <a id="submitBtnPOSTclient" href="# ">Submit</a>
 
             `
 
@@ -295,6 +294,45 @@ function registroDoctor() {
 
 
 }
+
+
+const button = document.getElementById('submitBtnPOSTclient')
+
+
+
+button.addEventListener('click', function(e) {
+
+    e.preventDefault()
+
+    const newPost = {
+        name: document.getElementById('inputClientName').value,
+        email: document.getElementById('inputClientEmail').value,
+        age: document.getElementById('inputClientAge').value
+
+
+
+    }
+
+
+    fetch('https://g51915f3bf5cc5a-barriosdb.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/client/client', {
+
+            method: 'POST',
+            body: JSON.stringify(newPost),
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            }
+
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
+
+
+    traerDatosClientes()
+
+
+})
+
+
 
 
 //-------------------------------------------------------------------------------------------------------------------------------
